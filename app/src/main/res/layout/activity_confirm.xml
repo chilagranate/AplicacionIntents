@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/pad_top"
+            android:paddingRight="@dimen/pad_top">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/form_conf"
+                android:textSize="@dimen/confirm_size" />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="@dimen/confirm_name_size"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conf_fechanac"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+                <TextView
+                    android:id="@+id/tvFechaNac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/form_padd"
+                    android:text="10/03/1992"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conf_tel"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+                <TextView
+                    android:id="@+id/tvTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/form_padd"
+                    android:text="4124142"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conf_mail"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+                <TextView
+                    android:id="@+id/tvMailConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/form_padd"
+                    android:text="asd@gmail.com"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conf_desc"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+                <TextView
+                    android:id="@+id/tvDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/form_padd"
+                    android:text="Descripción de esta persona"
+                    android:textSize="@dimen/confirm_txtsize" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_conf_size"
+            android:theme="@style/RaisedButton"
+            android:text="@string/form_button"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

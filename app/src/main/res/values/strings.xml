@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="form_name">Nombre completo</string>
+    <string name="form_phone">Telefono</string>
+    <string name="form_mail">E-mail</string>
+    <string name="form_desc">Descripción contacto</string>
+    <string name="form_conf">Confirmar datos</string>
+    <string name="conf_fechanac">Fecha nacimiento: </string>
+    <string name="conf_tel">Tel:</string>
+    <string name="conf_mail">Email:</string>
+    <string name="conf_desc">Descripción:</string>
+    <string name="form_button">Editar Datos</string>
+    <string name="form_button_sig">Siguiente</string>
+    <string name="pnombre">nombre</string>
+    <string name="pdate">date</string>
+    <string name="ptel">tel</string>
+    <string name="pmail">mail</string>
+    <string name="pdesc">desd</string>
+</resources>

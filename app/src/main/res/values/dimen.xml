@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="pad_top">10dp</dimen>
+    <dimen name="confirm_size">30sp</dimen>
+    <dimen name="confirm_txtsize">20sp</dimen>
+    <dimen name="form_padd">5dp</dimen>
+    <dimen name="bt_conf_size">60dp</dimen>
+    <dimen name="confirm_name_size">35dp</dimen>
+</resources>
