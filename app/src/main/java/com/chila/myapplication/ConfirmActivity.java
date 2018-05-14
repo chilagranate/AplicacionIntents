@@ -1,8 +1,10 @@
 package com.chila.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -53,11 +55,12 @@ public class ConfirmActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(ConfirmActivity.this, MainActivity.class);
-                intent.putExtra(getResources().getString(R.string.pnombre), contacto.getNombre());
-                intent.putExtra(getResources().getString(R.string.pdate), contacto.getFechaNac());
-                intent.putExtra(getResources().getString(R.string.ptel), contacto.getTelefono());
-                intent.putExtra(getResources().getString(R.string.pmail), contacto.getEmail());
-                intent.putExtra(getResources().getString(R.string.pdesc), contacto.getDesc());
+
+                intent  .putExtra(getResources().getString(R.string.pnombre), contacto.getNombre())
+                        .putExtra(getResources().getString(R.string.pdate), contacto.getFechaNac())
+                        .putExtra(getResources().getString(R.string.ptel), contacto.getTelefono())
+                        .putExtra(getResources().getString(R.string.pmail), contacto.getEmail())
+                        .putExtra(getResources().getString(R.string.pdesc), contacto.getDesc());
 
 
                 startActivity(intent);
@@ -65,6 +68,30 @@ public class ConfirmActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void onBackPressed() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Light_Dialog_Alert);
+        builder.setTitle("Cancelar carga")
+                .setMessage("Desea cancelar la carga del contacto?")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                })
+
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 
 
