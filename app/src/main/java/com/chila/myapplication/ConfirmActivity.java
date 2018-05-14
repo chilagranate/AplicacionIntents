@@ -42,8 +42,6 @@ public class ConfirmActivity extends AppCompatActivity {
         fecha.setTimeInMillis(contacto.getFechaNac());
         tvFechaNac.setText(String.valueOf(contacto.getCalFecha().get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(contacto.getCalFecha().get(Calendar.MONTH) + 1) + "/" + String.valueOf(contacto.getCalFecha().get(Calendar.YEAR)));
 
-        //SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
-        //tvFechaNac.setText(format1.format(fecha.getTime()));
         tvTel.setText(contacto.getTelefono());
         tvMail.setText(contacto.getEmail());
         tvDesc.setText(contacto.getDesc());
