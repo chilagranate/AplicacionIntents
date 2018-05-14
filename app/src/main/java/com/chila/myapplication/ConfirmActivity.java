@@ -18,8 +18,10 @@ public class ConfirmActivity extends AppCompatActivity {
         setContentView(R.layout.activity_confirm);
 
         final Bundle parametros = getIntent().getExtras();
-        final Contacto contacto;Contacto contacto1;
-        contacto1 = contacto1 = new Contacto(
+        final Contacto contacto;
+        Contacto contacto1;
+
+        contacto1 = new Contacto(
                 parametros.getString(getResources().getString(R.string.pnombre)),
                 parametros.getLong(getResources().getString(R.string.pdate)),
                 parametros.getString(getResources().getString(R.string.ptel)),
@@ -27,37 +29,41 @@ public class ConfirmActivity extends AppCompatActivity {
                 parametros.getString(getResources().getString(R.string.pdesc)));
 
         contacto = contacto1;
-        final TextView tvName     =       (TextView) findViewById(R.id.tvName);
-        TextView tvFechaNac =       (TextView) findViewById(R.id.tvFechaNac);
-        final TextView tvTel      =       (TextView) findViewById(R.id.tvTel);
-        final TextView tvMail     =       (TextView) findViewById(R.id.tvMailConfirm);
-        final TextView tvDesc     =       (TextView) findViewById(R.id.tvDescripcion);
+        final TextView tvName = findViewById(R.id.tvName);
+        final TextView tvFechaNac = findViewById(R.id.tvFechaNac);
+        final TextView tvTel = findViewById(R.id.tvTel);
+        final TextView tvMail = findViewById(R.id.tvMailConfirm);
+        final TextView tvDesc = findViewById(R.id.tvDescripcion);
 
 
         tvName.setText(contacto.getNombre());
 
         Calendar fecha = Calendar.getInstance();
-        SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
-        tvFechaNac.setText(format1.format(fecha.getTime()));
-        tvTel   .setText(contacto.getTelefono());
-        tvMail  .setText(contacto.getEmail());
-        tvDesc  .setText(contacto.getDesc());
+        fecha.setTimeInMillis(contacto.getFechaNac());
+        tvFechaNac.setText(String.valueOf(contacto.getCalFecha().get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(contacto.getCalFecha().get(Calendar.MONTH) + 1) + "/" + String.valueOf(contacto.getCalFecha().get(Calendar.YEAR)));
 
-        Button btEdit =(Button) findViewById(R.id.btEdit);
+        //SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+        //tvFechaNac.setText(format1.format(fecha.getTime()));
+        tvTel.setText(contacto.getTelefono());
+        tvMail.setText(contacto.getEmail());
+        tvDesc.setText(contacto.getDesc());
+
+        Button btEdit = findViewById(R.id.btEdit);
         btEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                Intent intent= new Intent(ConfirmActivity.this, MainActivity.class);
-                /*intent.putExtra(getResources().getString(R.string.pnombre), contacto.getNombre());
+                Intent intent = new Intent(ConfirmActivity.this, MainActivity.class);
+                intent.putExtra(getResources().getString(R.string.pnombre), contacto.getNombre());
                 intent.putExtra(getResources().getString(R.string.pdate), contacto.getFechaNac());
                 intent.putExtra(getResources().getString(R.string.ptel), contacto.getTelefono());
                 intent.putExtra(getResources().getString(R.string.pmail), contacto.getEmail());
                 intent.putExtra(getResources().getString(R.string.pdesc), contacto.getDesc());
-*/
-                
+
+
                 startActivity(intent);
+                finish();
             }
         });
 

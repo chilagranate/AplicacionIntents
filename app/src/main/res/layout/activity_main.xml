@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".MainActivity">
+
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,8 +34,8 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/form_name"
                     android:imeOptions="actionDone"
-                    android:singleLine="true"
-                    android:inputType="textCapWords"/>
+                    android:inputType="textCapWords"
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -41,8 +45,9 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:nextFocusDown="@id/tvTelefono"
-                android:paddingTop="@dimen/pad_top"
                 android:nextFocusForward="@id/tvTelefono">
+
+
 
 
             </DatePicker>
@@ -57,10 +62,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/form_phone"
-                    android:nextFocusDown="@id/tvMail"
-                    android:singleLine="true"
                     android:imeOptions="actionNext"
-                    android:inputType="phone"/>
+                    android:inputType="phone"
+                    android:nextFocusDown="@id/tvMail"
+                    android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -74,11 +79,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/form_mail"
-                    android:nextFocusDown="@id/tvDesc"
-                    android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
-                    />
+                    android:nextFocusDown="@id/tvDesc"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -91,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/form_desc"
                     android:imeOptions="actionDone"
-                    android:inputType="textCapWords"
+                    android:inputType="textCapSentences"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
@@ -99,7 +103,7 @@
             <Button
                 android:id="@+id/btSig"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/bt_conf_size"
                 android:text="@string/form_button_sig"
                 android:theme="@style/RaisedButton" />
 
