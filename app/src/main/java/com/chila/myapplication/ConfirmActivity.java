@@ -79,6 +79,8 @@ public class ConfirmActivity extends AppCompatActivity {
                 .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(ConfirmActivity.this, MainActivity.class);
+                        startActivity(i);
                         finish();
                     }
                 })

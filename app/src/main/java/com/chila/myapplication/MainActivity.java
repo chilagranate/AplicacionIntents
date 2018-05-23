@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(getResources().getString(R.string.pmail), contacto.getEmail());
                 intent.putExtra(getResources().getString(R.string.pdesc), contacto.getDesc());
                 startActivity(intent);
+                finish();
 
             }
         });
